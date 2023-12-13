@@ -27,7 +27,7 @@ public class Fast_Cash extends javax.swing.JFrame {
     }
 
     public void fastWithdraw(int amount) {
-        String funcType = "withdraw";
+        String funcType = "Withdraw";
         int amt = amount;
         new PIN(amt, ac_no, funcType).setVisible(true);
         this.setVisible(false);

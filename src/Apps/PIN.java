@@ -128,6 +128,11 @@ public class PIN extends javax.swing.JFrame {
         jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img_Icons/exits.png"))); // NOI18N
 
         jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img_Icons/Back Arrow.png"))); // NOI18N
+        jLabel23.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel23MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -499,7 +504,12 @@ public class PIN extends javax.swing.JFrame {
             db.rst = db.pstmt.executeQuery();
 
             if (db.rst.next()) {
-                int totalAmt = Integer.parseInt(db.rst.getString(1));
+                int totalAmt;
+                JOptionPane.showMessageDialog(this, "amt " + db.rst.getString(1));
+                
+                
+                totalAmt = Integer.parseInt(db.rst.getString(1));
+   
 
                 totalAmt = totalAmt + cashAmt;
                 db.pstmt = db.con.prepareStatement("update open_account_table set amount=? where ac_no=? ");
@@ -704,6 +714,12 @@ public class PIN extends javax.swing.JFrame {
             jPasswordField1.setText(str2.substring(0, 4));
         }
     }//GEN-LAST:event_jPasswordField1KeyPressed
+
+    private void jLabel23MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel23MouseClicked
+        // TODO add your handling code here:
+        this.setVisible(false);
+        new User_Home().setVisible(true);
+    }//GEN-LAST:event_jLabel23MouseClicked
 
     /**
      * @param args the command line arguments

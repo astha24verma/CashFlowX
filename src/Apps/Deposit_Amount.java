@@ -103,7 +103,6 @@ String ac_no = "";
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 840, 60));
 
-        Bt2.setBackground(new java.awt.Color(153, 204, 255));
         Bt2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         Bt2.setText("Clear");
         Bt2.addActionListener(new java.awt.event.ActionListener() {
@@ -111,9 +110,8 @@ String ac_no = "";
                 Bt2ActionPerformed(evt);
             }
         });
-        jPanel1.add(Bt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 510, -1, -1));
+        jPanel1.add(Bt2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 510, 100, -1));
 
-        Bt3.setBackground(new java.awt.Color(153, 204, 255));
         Bt3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         Bt3.setText("Deposit");
         Bt3.addActionListener(new java.awt.event.ActionListener() {
@@ -121,7 +119,7 @@ String ac_no = "";
                 Bt3ActionPerformed(evt);
             }
         });
-        jPanel1.add(Bt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 510, -1, -1));
+        jPanel1.add(Bt3, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 510, 100, -1));
 
         MainImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img_Back/Gradient 2 - Copy.jpg"))); // NOI18N
         jPanel1.add(MainImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(-5, -5, 850, 600));
