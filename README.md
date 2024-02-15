@@ -1,3 +1,3 @@
-##CashFlowX: ATM Banking Solution##
+## CashFlowX: ATM Banking Solution
 
 ATM Banking Application using Java Swing & AWT, MySQL
